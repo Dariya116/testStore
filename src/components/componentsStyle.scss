@@ -1,0 +1,61 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  margin-top: 20px;
+  margin-bottom: 50px;
+
+  &_store {
+    color: black;
+    font-weight: lighter;
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+  &_button {
+    height: 50px;
+    width: 150px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: transparent;
+    &_active {
+      height: 50px;
+      width: 150px;
+      font-size: 16px;
+      border: 1px solid #008080;
+      border-radius: 15px;
+      background-color: transparent;
+      color: #008080;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  height: 570px;
+  width: 440px;
+  &:hover {
+    cursor: pointer;
+  }
+  &_image {
+    height: 400px;
+    width: 300px;
+  }
+  &_icon {
+    gap: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 70px;
+  }
+}
