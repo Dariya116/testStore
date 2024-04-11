@@ -7,7 +7,6 @@ export const ViewProduct = () => {
   const { id } = useParams();
 
   const { isLoading, isError, data } = useGetProductQuery(String(id));
-
   return (
     <div className={'content content_product'}>
       {isLoading && <p>Loading...</p>}

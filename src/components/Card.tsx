@@ -20,18 +20,13 @@ export const Card: React.FC<CardProps> = ({ product }) => {
 
   const { pathname } = useLocation();
 
-  const { addFavorites, removeFavoriteProduct, removeProduct } = useActions();
+  const { addFavorites, removeProduct } = useActions();
   const { favoriteProduct } = useAppSelector((state) => state.favorites);
 
   const handleFavorite = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     event.preventDefault();
     event.stopPropagation();
-
-    if (favoriteProduct.includes(product)) {
-      removeFavoriteProduct(product);
-    } else {
-      addFavorites(product);
-    }
+    addFavorites(product);
   };
 
   const removeCard = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {

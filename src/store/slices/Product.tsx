@@ -19,10 +19,13 @@ const productsSlice = createSlice({
       state.allProducts = action.payload;
     },
     addFavorites(state, action: PayloadAction<InterfaceProduct>) {
+      if (state.favoriteProduct.find(({ id }) => id === action.payload.id)) {
+        state.favoriteProduct = state.favoriteProduct.filter(
+          (item) => item.id !== action.payload.id,
+        );
+        return;
+      }
       state.favoriteProduct.push(action.payload);
-    },
-    removeFavoriteProduct(state, action: PayloadAction<InterfaceProduct>) {
-      state.favoriteProduct = state.favoriteProduct.filter((f) => f.id !== action.payload.id);
     },
     removeProduct(state, action: PayloadAction<InterfaceProduct>) {
       state.allProducts = state.allProducts.filter((p) => p.id !== action.payload.id);
