@@ -14,10 +14,11 @@ export const Navigation = () => {
       navigate('/favorites');
     }
   };
+
   return (
     <div className="header">
       <Link to="/">
-        <h1 className="header_store">Store</h1>
+        <h1 className="header_store">STORE</h1>
       </Link>
       <button
         onClick={handleFavorites}

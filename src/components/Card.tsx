@@ -3,21 +3,18 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { FcLikePlaceholder } from 'react-icons/fc';
 import { FcLike } from 'react-icons/fc';
 import { CiCircleRemove } from 'react-icons/ci';
-
 import { useAppSelector } from '../store/redux';
 import { useActions } from '../store/actions';
-
 import { InterfaceProduct } from '../type/type';
-
 import './componentsStyle.scss';
 
 interface CardProps {
   product: InterfaceProduct;
   key?: number;
 }
+
 export const Card: React.FC<CardProps> = ({ product }) => {
   const navigate = useNavigate();
-
   const { pathname } = useLocation();
 
   const { addFavorites, removeProduct } = useActions();
@@ -39,7 +36,7 @@ export const Card: React.FC<CardProps> = ({ product }) => {
   };
 
   return (
-    <div className="card" onClick={handleCard}>
+    <div className={'card'} onClick={handleCard}>
       <img className="card_image" src={product.image} alt="item" />
       <h3 className="card_title">{product.title}</h3>
       <p className="card_description">

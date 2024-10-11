@@ -6,7 +6,6 @@ export interface InterfaceProduct {
   category: string;
   image: string;
   rating: Rating;
-
 }
 
 export interface Rating {

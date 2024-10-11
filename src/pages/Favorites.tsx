@@ -1,8 +1,6 @@
 import { useAppSelector } from '../store/redux';
 import { InterfaceProduct } from '../type/type';
-
 import { Card } from '../components/Card';
-
 import '../index.scss';
 
 export const Favorites = () => {
@@ -11,5 +9,6 @@ export const Favorites = () => {
   const productFavoritesCart = favoriteProduct?.map((product: InterfaceProduct) => {
     return <Card product={product} key={product.id} />;
   });
+
   return <div className={'content content_favorites'}>{productFavoritesCart}</div>;
 };

@@ -1,12 +1,9 @@
 import { useEffect } from 'react';
-
 import { Card } from '../components/Card';
 import { InterfaceProduct } from '../type/type';
 import { useGetProductsQuery } from '../store/slices/ProductsApi';
-
 import { useActions } from '../store/actions';
 import { useAppSelector } from '../store/redux';
-
 import '../index.scss';
 
 export const Home = () => {
